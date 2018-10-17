@@ -1,0 +1,2 @@
+# GoServer
+Basic Go server
