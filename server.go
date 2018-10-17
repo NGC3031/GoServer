@@ -9,7 +9,7 @@ import (
 )
 
 // The new router function creates the router and returns it.
-// Having it in a seperate function makes for easier flexibility and testing
+// Having it separate makes for easier flexibility and testing
 func newRouter() *mux.Router {
 	r := mux.NewRouter()
 	r.HandleFunc("/hello", handler).Methods("GET")
