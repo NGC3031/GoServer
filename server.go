@@ -8,12 +8,16 @@ import (
 	"github.com/gorilla/mux"
 )
 
-//testing
 // The new router function creates the router and returns it.
 // Having it separate makes for easier flexibility and testing
 func newRouter() *mux.Router {
 	r := mux.NewRouter()
 	r.HandleFunc("/hello", handler).Methods("GET")
+	staticFileDirectory := http.Dir("./assets/")
+	staticFileHandler := http.StripPrefix("/assets/", http.FileServer(staticFileDirectory))
+	// The "PathPrefix" method acts as a matcher, and matches all routes starting
+	// with "/assets/", instead of the absolute route itself
+	r.PathPrefix("/assets/").Handler(staticFileHandler).Methods("GET")
 	return r
 }
 
