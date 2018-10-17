@@ -8,6 +8,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+//testing
 // The new router function creates the router and returns it.
 // Having it separate makes for easier flexibility and testing
 func newRouter() *mux.Router {
