@@ -1,4 +1,4 @@
-# GoServer
-Basic Go server but git probs
+# GoServers
+Basic Go servers experimenting
 So lets see if the sync worked
 Hmmm
